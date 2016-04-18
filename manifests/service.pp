@@ -36,7 +36,7 @@ class grafana::service {
           hasrestart => false,
           hasstatus  => false,
           status     => "ps -ef | grep ${::grafana::service_name} | grep -v grep",
-          require => Package['grafana install'],
+          require => Package['grafana-package'],
         }
       }
     }
