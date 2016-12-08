@@ -18,7 +18,7 @@ class grafana::install {
       default           => $real_archive_source,
     }
   }
-  
+
   case $::grafana::install_method {
     'docker': {
       docker::image { 'grafana/grafana':
@@ -31,17 +31,6 @@ class grafana::install {
         'Debian': {
           package { 'libfontconfig1':
             ensure => present
-          }
-
-          # if using 'latest' keyword version, this will run all the time
-          if $grafana_version != $::grafana::version {
-            file { '/tmp/grafana.deb':
-              ensure   => absent
-            }
-            package { $::grafana::package_name:
-              ensure   => absent,
-              provider => 'dpkg'
-            }
           }
 
           wget::fetch { 'grafana':
