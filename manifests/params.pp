@@ -16,7 +16,7 @@ class grafana::params {
   $install_method      = 'package'
   $ldap_cfg            = false
   $manage_package_repo = true
-  $package_name        = 'grafana-package'
+  $package_name        = 'grafana'
   $package_source      = undef
   $rpm_iteration       = '1'
   $service_name        = 'grafana-server'
