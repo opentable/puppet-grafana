@@ -47,8 +47,8 @@
       "version_requirement": ">= 0.5.1"
     },
     {
-      "name": "garethr/docker",
-      "version_requirement": ">= 3.5.0 <6.0.0"
+      "name": "puppetlabs-docker",
+      "version_requirement": ">= 1.0.0"
     },
     {
       "name": "maestrodev/wget",
